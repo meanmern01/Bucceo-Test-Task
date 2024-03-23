@@ -1,6 +1,7 @@
 import './App.css'
 import Footer from './components/Footer'
 import Gallery from './components/Gallery'
+import DestinationSection from './components/DestinationSection'
 import HeroSection from './components/HeroSection'
 import Navbar from './components/Navbar'
 import Schools from './components/Schools'
@@ -14,6 +15,7 @@ function App() {
       <Schools />
       <Gallery />
       <Footer />
+      <DestinationSection />
     </>
   )
 }
