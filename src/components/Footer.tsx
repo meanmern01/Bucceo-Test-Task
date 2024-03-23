@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="pl-6 sm:pl-0 md:flex md:justify-between pb-11">
                     <div className="mb-6 md:mb-0">
                         <a href="#" className="flex items-center">
-                            LOGO
+                            <img src="/assets/footer_logo.png" alt="Logo" />
                         </a>
                     </div>
                     <div className="pr-6 sm:pr-0 grid grid-cols-1 gap-11 sm:gap-[73px] sm:grid-cols-2 md:grid-cols-3">

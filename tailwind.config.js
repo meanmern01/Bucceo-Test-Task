@@ -7,8 +7,15 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        footerBg: "#51536C"
+        footerBg: "#51536C",
+      },
+      backgroundImage: {
+        linearGradient: "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)"
+      },
+      boxShadow: {
+        cardShadow: "0px 4px 4px 0px #00000040"
       }
+
     },
   },
   plugins: [],
