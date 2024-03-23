@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <p className="text-red-500">
         Welcome !
       </p>
+      <Footer />
     </>
   )
 }
