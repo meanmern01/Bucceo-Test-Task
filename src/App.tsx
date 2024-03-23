@@ -12,10 +12,10 @@ function App() {
     <>
       <Navbar />
       <HeroSection />
+      <DestinationSection />
       <Schools />
       <Gallery />
       <Footer />
-      <DestinationSection />
     </>
   )
 }

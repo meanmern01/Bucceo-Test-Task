@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
 
 
-        <nav className="bg-white relative shadow-custom-box-shadow">
+        <nav className="bg-white relative shadow-cardShadow">
             <div className="md:h-[90px] lg:pl-5 xl:pl-[50px] lg:h-[100px] xl:h-[124px] flex items-center justify-between mx-auto p-5">
                 <a href="#" className="flex items-center">
                     <img src="/assets/logo.png" className="h-14 md:h-[50px] lg:h-[70px] xl:h-[78px]" alt="Logo" />
