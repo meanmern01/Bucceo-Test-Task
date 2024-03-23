@@ -12,6 +12,12 @@ export const NavbarItems = [
     icon: "",
   },
   {
+    navItem: "Register",
+    path: "/",
+    active: false,
+    icon: "",
+  },
+  {
     navItem: "Languages",
     path: "/",
     active: false,
