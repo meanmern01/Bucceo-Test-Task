@@ -17,9 +17,8 @@ const Navbar = () => {
             document.body.style.overflow = 'unset';
         };
     }, [showMenu]);
+
     return (
-
-
         <nav className="bg-white relative shadow-cardShadow">
             <div className="md:h-[90px] lg:pl-5 xl:pl-[50px] lg:h-[100px] xl:h-[124px] flex items-center justify-between mx-auto p-5">
                 <a href="#" className="flex items-center">
@@ -30,12 +29,13 @@ const Navbar = () => {
                 </button>
                 <div className="hidden w-full md:block md:w-auto mr-[125px] lg:mr-[155px] xl:mr-[188px]" id="navbar-default">
                     <ul className="font-medium flex flex-col gap-3 lg:gap-5 md:flex-row md:mt-0">
-                        {NavbarItems.map((item, index) => (
-
-                            <li>
-                                <a key={index} href="#" className={` font-semibold lg:text-[16px] xl:text-[20px] flex items-center gap-1 md:hover:text-[#3B62C9] ${item.active ? "text-[#3B62C9]" : "text-[#000000]"}`}>{item.navItem} {item.icon && <img src={item.icon} />}</a>
-                            </li>
-                        ))}
+                        {
+                            NavbarItems.map((item) => (
+                                <li key={item.navItem}>
+                                    <a href="#" className={` font-semibold lg:text-[16px] xl:text-[20px] flex items-center gap-1 md:hover:text-[#3B62C9] ${item.active ? "text-[#3B62C9]" : "text-[#000000]"}`}>{item.navItem} {item.icon && <img src={item.icon} />}</a>
+                                </li>
+                            ))
+                        }
                     </ul>
                 </div>
             </div>
@@ -56,12 +56,13 @@ const Navbar = () => {
                     </div>
                     <div className="w-full block md:w-auto py-4 px-6" id="navbar-default">
                         <ul className="font-medium flex flex-col gap-3">
-                            {NavbarItems.map((item, index) => (
-
-                                <li>
-                                    <a onClick={() => setShowMenu(false)} key={index} href="#" className={` font-semibold text-[20px] flex items-center gap-1 p-2 pl-3 rounded-lg md:hover:text-[#3B62C9] ${item.active ? "bg-[#3B62C9] text-white" : " bg-white text-black"}`}>{item.navItem} {item.icon && <img src={item.icon} />}</a>
-                                </li>
-                            ))}
+                            {
+                                NavbarItems.map((item) => (
+                                    <li key={item.navItem}>
+                                        <a onClick={() => setShowMenu(false)} href="#" className={` font-semibold text-[20px] flex items-center gap-1 p-2 pl-3 rounded-lg md:hover:text-[#3B62C9] ${item.active ? "bg-[#3B62C9] text-white" : " bg-white text-black"}`}>{item.navItem} {item.icon && <img src={item.icon} />}</a>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                 </div>
