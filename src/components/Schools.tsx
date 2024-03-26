@@ -1,21 +1,22 @@
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { schools } from "../constants/schools";
+import { SchoolData, schools } from "../constants/schools";
 import SchoolCard from "./SchoolCard";
 
-
-
 const Schools = () => {
-    // const [showMore, setShowMore] = useState(false)
-    // const [cardsData, setCardsData] = useState()
+    const [showMore, setShowMore] = useState(false)
+    const [cardsData, setCardsData] = useState<SchoolData[]>([])
 
-    // useEffect(() => {
-    //     const arr = [1, 2, 3, 4, 5, 6];
-    //     const firstThreeElements = arr.slice(0, 3);
-    //     // setCardsData(firstThreeElements);
-    // }, [showMore]);
+    useEffect(() => {
+        if (showMore) {
+            setCardsData(schools)
+        } else {
+            const firstThreeElements = schools.slice(0, 3);
+            setCardsData(firstThreeElements);
+        }
+    }, [showMore]);
 
     function SampleNextArrow(props: any) {
         const { className, onClick } = props;
@@ -39,7 +40,7 @@ const Schools = () => {
     var settings = {
         dots: false,
         arrow: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 3.5,
         slidesToScroll: 1,
@@ -81,12 +82,14 @@ const Schools = () => {
             </div>
             <div className="flex flex-wrap gap-4 m-auto md:hidden">
                 {
-                    schools.map((school, i) => (
+                    cardsData.map((school, i) => (
                         <SchoolCard school={school} key={`school-${i}`} />
                     ))
                 }
-                {/* <p className="px-[14px] text-[32px] text-right w-full md:hidden"
-                    onClick={() => setShowMore(prev => prev = !prev)} >More Trips...</p> */}
+                <p className="px-[14px] text-2xl sm:text-[32px] text-right w-full cursor-pointer"
+                    onClick={() => setShowMore(prev => prev = !prev)} >
+                    {showMore ? "Less" : "More"} Trips...
+                </p>
             </div>
         </section>
     )

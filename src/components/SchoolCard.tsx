@@ -1,19 +1,4 @@
-interface SchoolData {
-    image: string;
-    location: string;
-    schoolName: string;
-    rating: number;
-    liked: boolean;
-    date: {
-        image: string;
-        text: string;
-        highlight: string;
-    }[];
-    features: {
-        text: string;
-        image?: string;
-    }[];
-}
+import { SchoolData } from "../constants/schools"
 
 interface School {
     school: SchoolData
