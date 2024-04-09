@@ -5,7 +5,7 @@ import BreadCrumb from '../components/shared/BreadCrumb'
 
 const ProductDetail = () => {
     return (
-        <div className=' mb-10'>
+        <div className='max-w-screen-xl m-auto'>
             <BreadCrumb />
             <ProductMetaData />
             <GallerySection />
