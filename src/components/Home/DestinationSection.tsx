@@ -1,4 +1,4 @@
-import { destination } from "../constants/destinations"
+import { destination } from "../../constants/destinations"
 import DestinationCard from "./DestinationCard"
 
 

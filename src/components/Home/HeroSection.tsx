@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { countries } from "../constants/countries";
+import { countries } from "../../constants/countries";
 
 interface filterData {
   name: string;
@@ -46,22 +46,21 @@ const HeroSection = () => {
         />
         <div className="absolute top-[64px] w-full rounded-[10px] overflow-hidden shadow-cardShadow">
           <div
-            className={`${searchFlag ? "block" : "hidden"} ${
-              filteredData.length === 0 ? "h-auto" : "h-[250px]"
-            } bg-white p-4 overflow-y-scroll`}
+            className={`${searchFlag ? "block" : "hidden"} ${filteredData.length === 0 ? "h-auto" : "h-[250px]"
+              } bg-white p-4 overflow-y-scroll`}
           >
             {filteredData.length === 0
               ? "No Result Found"
               : filteredData?.map((e, i) => {
-                  return (
-                    <div key={i} className="flex items-center gap-3 my-3">
-                      <span className="h-[40px] w-[40px] p-1 bg-gray-500 rounded-full grid place-items-center">
-                        {e?.code}
-                      </span>
-                      <h2 className="text-lg">{e?.name}</h2>
-                    </div>
-                  );
-                })}
+                return (
+                  <div key={i} className="flex items-center gap-3 my-3">
+                    <span className="h-[40px] w-[40px] p-1 bg-gray-500 rounded-full grid place-items-center">
+                      {e?.code}
+                    </span>
+                    <h2 className="text-lg">{e?.name}</h2>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>

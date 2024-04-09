@@ -1,4 +1,5 @@
-import { SchoolData } from "../constants/schools"
+import { SchoolData } from "../../constants/schools"
+import { Link } from "react-router-dom"
 
 interface School {
     school: SchoolData
@@ -6,7 +7,7 @@ interface School {
 
 const SchoolCard = ({ school }: School) => {
     return (
-        <div className="px-2">
+        <Link to={"/product-detail"} className="px-2">
             <div className="shadow-cardShadow rounded-[21px] overflow-hidden relative">
 
                 <img src={`/assets/${school.image}`} alt={school.schoolName} className="w-full" />
@@ -53,7 +54,7 @@ const SchoolCard = ({ school }: School) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

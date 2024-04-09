@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { SchoolData, schools } from "../constants/schools";
+import { SchoolData, schools } from "../../constants/schools";
 import SchoolCard from "./SchoolCard";
 
 const Schools = () => {

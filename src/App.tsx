@@ -1,20 +1,19 @@
 import './App.css'
-import Footer from './components/Footer'
-import Gallery from './components/Gallery'
-import DestinationSection from './components/DestinationSection'
-import HeroSection from './components/HeroSection'
-import Navbar from './components/Navbar'
-import Schools from './components/Schools'
+import { Routes, Route } from "react-router-dom"
+import Home from './pages/Home'
+import ProductDetail from './pages/ProductDetail'
+import Navbar from './components/shared/Navbar'
+import Footer from './components/shared/Footer'
 
 function App() {
 
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <DestinationSection />
-      <Schools />
-      <Gallery />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/product-detail' element={<ProductDetail />} />
+      </Routes>
       <Footer />
     </>
   )

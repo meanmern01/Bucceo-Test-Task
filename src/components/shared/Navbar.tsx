@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { NavbarItems } from "../constants/navbar"
+import { NavbarItems } from "../../constants/navbar"
 
 
 const Navbar = () => {

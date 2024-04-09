@@ -1,4 +1,4 @@
-import { Company, Discover, Legal } from "../constants/footer"
+import { Company, Discover, Legal } from "../../constants/footer"
 
 const Footer = () => {
 
