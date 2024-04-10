@@ -7,7 +7,7 @@ interface School {
 
 const SchoolCard = ({ school }: School) => {
     return (
-        <Link to={"/product-detail"} className="px-2">
+        <Link to={"/product-detail"} className="px-2 block">
             <div className="shadow-cardShadow rounded-[21px] overflow-hidden relative">
 
                 <img src={`/assets/${school.image}`} alt={school.schoolName} className="w-full" />

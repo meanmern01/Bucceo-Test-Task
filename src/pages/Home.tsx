@@ -10,7 +10,7 @@ const Home = () => {
 
             <HeroSection />
             <DestinationSection />
-            <Schools />
+            <Schools title={"Diving Schools"} />
             <Gallery />
 
         </>

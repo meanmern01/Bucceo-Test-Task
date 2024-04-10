@@ -4,8 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { SchoolData, schools } from "../../constants/schools";
 import SchoolCard from "./SchoolCard";
+interface propsTypes {
+    title: string
 
-const Schools = () => {
+}
+
+const Schools = ({ title }: propsTypes) => {
     const [showMore, setShowMore] = useState(false)
     const [cardsData, setCardsData] = useState<SchoolData[]>([])
 
@@ -40,7 +44,7 @@ const Schools = () => {
     var settings = {
         dots: false,
         arrow: false,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 3.5,
         slidesToScroll: 1,
@@ -50,7 +54,6 @@ const Schools = () => {
             {
                 breakpoint: 1199,
                 settings: {
-                    initialSlide: 2.5,
                     slidesToShow: 2.5,
                     slidesToScroll: 1,
                     infinite: true,
@@ -59,8 +62,7 @@ const Schools = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    initialSlide: 1.5,
-                    slidesToShow: 1,
+                    slidesToShow: 1.5,
                     slidesToScroll: 1,
                 }
             },
@@ -69,7 +71,7 @@ const Schools = () => {
 
     return (
         <section className="mx-auto w-[90%] xl:max-w-[1199px] py-[100px] 2xl:max-w-[1320px]">
-            <h1 className="text-center text-2xl sm:text-[32px] font-normal pb-9">Diving Schools</h1>
+            <h1 className="text-center text-2xl sm:text-[32px] font-normal pb-9">{title}</h1>
             <div className="relative hidden md:block">
                 <Slider {...settings}>
                     {
