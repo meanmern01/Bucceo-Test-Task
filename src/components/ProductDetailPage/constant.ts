@@ -135,3 +135,89 @@ export const services2 = [
     title: "Fabelhaftes Frühstück",
   },
 ];
+export const services3 = [
+  {
+    image: "equipmentRental",
+    title: "EQUIPMENT RENTAL",
+  },
+  {
+    image: "equipmentService",
+    title: "EQUIPMENT SERVICE & REPAIR ",
+    subtitle: "Regulators,BCDs",
+  },
+  {
+    image: "paymentMethod",
+    title: "PAYMENT METHODS",
+  },
+];
+export const services4 = [
+  {
+    image: "facilities",
+    title: "FACILITIES",
+    subtitle:
+      "  Onsite training pool, Onsite classroom, Airconditioning,Wifi-Fi(FREE),Retail shop,Waterfront location,Housereef,Dive boat",
+  },
+  {
+    image: "staff",
+    title: "STAFF ",
+    subtitle:
+      "Experienced and certified instructors, 24/7 support, Dedicated to your well-being and success",
+  },
+];
+
+export const months = [
+  "JAN",
+  "FEB",
+  "MAR",
+  "APR",
+  "MAY",
+  "JUN",
+  "JUL",
+  "AUG",
+  "SEP",
+  "OCT",
+  "NOV",
+  "DEC",
+];
+export const marineData = {
+  oceanFish: {
+    categoryName: "Ocean Fish",
+    data: [
+      { name: "Shark" },
+      { name: "Dolphin" },
+      {
+        name: "Tuna",
+      },
+      {
+        name: "Salmon",
+      },
+      { name: "Swordfish" },
+    ],
+  },
+  sharks: {
+    categoryName: "Sharks and Rays",
+    data: [
+      { name: "Thresher Shark" },
+      { name: "Whitetip reef shark" },
+      {
+        name: "Eagle ray",
+      },
+      {
+        name: "Blacktip reef shark",
+      },
+      {
+        name: "Rays",
+      },
+    ],
+  },
+  mammals: {
+    categoryName: "Mammals and Reptiles",
+    data: [
+      { name: "Sea snake" },
+      { name: "Sea turtle" },
+      { name: "Common dolphin" },
+      { name: "Dolphins" },
+      { name: "Whale shark" },
+    ],
+  },
+};
