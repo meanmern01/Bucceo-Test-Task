@@ -3,21 +3,21 @@ import { services, zimmer, zimmerTypen, review } from "./constant";
 const InformationSection = () => {
   return (
     <>
-      <div className="py-10">
+      <div className="py-5">
         <div className="pb-3 border-b-2 border-slate-300">
-          <h6 className="text-3xl font-semibold tracking-tight">
+          <h6 className="text-2xl md:text-3xl font-semibold tracking-tight">
             Nähere Informationen
           </h6>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 py-5 gap-10">
           <div>
             <div className="flex flex-col gap-2.5 border-b pb-8">
-              <div className="flex gap-3 items-center">
+              <div className="flex gap-3 items-center flex-wrap">
                 <h6 className="text-[60px] leading-none tracking-tighter font-bold">
                   5,0
                 </h6>
-                <div className="flex flex-col">
-                  <p className="text-lg md:text-[20px] font-semibold tracking-tight">
+                <div className="flex flex-col ">
+                  <p className="text-lg md:text-[20px]  font-semibold tracking-tight">
                     Ausgezeichnet
                   </p>
                   <div className="flex items-center gap-2">
@@ -34,7 +34,7 @@ const InformationSection = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-lg md:text-[20px] p-0 tracking-tight">
+              <p className="text-lg md:text-[20px]  p-0 tracking-tight">
                 Nr. 1 von 687 Hotels in Prag
               </p>
               <div className="py-3">

@@ -4,8 +4,8 @@ const ProductMetaData = () => {
   const rate = 4.5;
   return (
     <div className="py-5">
-      <div className="flex flex-col md:flex-row justify-between items-start">
-        <div className="flex flex-col gap-2 w-full md:w-3/4">
+      <div className="flex flex-col md:flex-row gap-5 justify-between items-start">
+        <div className="flex flex-col gap-2 w-full md:w-3/5 lg:w-3/4">
           <p className="text-3xl md:text-4xl font-semibold tracking-tight">
             {data.title}
           </p>
@@ -42,21 +42,23 @@ const ProductMetaData = () => {
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
               {data.question}
             </h1>
-            <p className="text-[16px] md:text-[18px]">{data.data}</p>
+            <p className="text-[14px] md:text-[16px] lg:text-[18px]">
+              {data.data}
+            </p>
           </div>
         </div>
-        <div className="flex flex-col gap-6 items-end w-full md:w-1/4">
+        <div className="flex flex-col gap-6 items-end w-full md:w-2/5 lg:w-1/4">
           <div className="flex gap-5">
-            <button className="text-[#0F80E8] bg-[#B2DFFF] px-5 py-2 rounded-lg text-[16px] md:text-[18px] leading-none font-semibold shadow-cardShadow">
+            <button className="text-[#0F80E8] bg-[#B2DFFF] px-5 py-2 rounded-lg text-[14px] md:text-[16px] lg:text-[18px] leading-none font-semibold shadow-cardShadow">
               Book HERE
             </button>
             <div className="flex items-center gap-2 rounded-lg cursor-pointer font-semibold shadow-cardShadow border bg-white px-4 py-3">
               <img
                 src={`/assets/calendar.svg`}
                 alt="calendar"
-                className="h-[18px] w-[18px]"
+                className="w-[16px] h-[16px] md:h-[18px] md:w-[18px]"
               />
-              <span className="text-[16px] md:text-[18px] leading-none">
+              <span className="text-[14px] md:text-[16px] lg:text-[18px] leading-none">
                 next on Oct.27
               </span>
             </div>

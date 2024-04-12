@@ -10,7 +10,7 @@ import BreadCrumb from "../components/shared/BreadCrumb";
 
 const ProductDetail = () => {
   return (
-    <div className="sm:mx-auto w-full lg:max-w-[991px] xl:max-w-[1199px] 2xl:max-w-[1320px] px-[50px] sm:px-4 py-6 lg:pt-0 pb-0">
+    <div className="sm:mx-auto w-full lg:max-w-[991px] xl:max-w-[1199px] 2xl:max-w-[1320px] px-[20px] sm:px-4 py-6 lg:pt-0 pb-0">
       <BreadCrumb />
       <GallerySection />
       <ProductMetaData />

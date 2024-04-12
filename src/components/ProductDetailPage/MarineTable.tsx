@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { marineData, months } from "./constant";
-// Define interfaces for your data
+
 interface Animal {
   name: string;
 }
@@ -8,10 +8,6 @@ interface Animal {
 interface Category {
   categoryName: string;
   data: Animal[];
-}
-
-interface MarineData {
-  [key: string]: Category;
 }
 
 const MarineTable = () => {
@@ -30,12 +26,12 @@ const MarineTable = () => {
     const isVisible = categoryVisibility[category.categoryName] ?? false;
 
     return (
-      <div className="overflow-x-auto mt-10">
+      <div className="overflow-x-auto  mt-10">
         <table className="w-full border table-auto rounded-md">
           <thead>
             <tr className={`${isVisible ? "bg-gray-100" : ""}`}>
               <th
-                className={`px-4 py-2 w-[300px] text-start flex justify-between items-center `}
+                className={`px-4 py-2 md:w-[200px] flex gap-2 w-max justify-between items-center`}
               >
                 <div className="flex whitespace-nowrap">
                   {category.categoryName}
@@ -58,7 +54,7 @@ const MarineTable = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        d="M5 10l7-7m0 0l7 7m-7-7v18"
+                        d="M19 15l-7-7-7 7"
                       />
                     </svg>
                   ) : (
@@ -82,8 +78,7 @@ const MarineTable = () => {
               {months.map((month, index) => (
                 <th
                   key={index}
-                  className={`px-4 py-2 text-gray-400 font-medium text-xs  text-center 
-             `}
+                  className={`px-4 py-2 text-gray-400 font-medium text-xs text-center`}
                 >
                   {month}
                 </th>
