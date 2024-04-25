@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { marineData, months } from "./constant";
 
 interface Animal {
@@ -9,11 +9,32 @@ interface Category {
   categoryName: string;
   data: Animal[];
 }
-
-const MarineTable = () => {
+//  
+interface PropsTypes {
+  selectedMarinLife?: {
+    name: string;
+    value: string;
+  };
+}
+// 
+const MarineTable = ({ selectedMarinLife }: PropsTypes) => {
   const [categoryVisibility, setCategoryVisibility] = useState<{
     [key: string]: boolean;
   }>({});
+
+  useEffect(() => {
+
+    const initialVisibilityState = Object.keys(marineData).reduce(
+      (acc, key) => ({
+        ...acc,
+        [key]: true,
+      }),
+      {}
+    );
+    setCategoryVisibility(initialVisibilityState);
+  }, []);
+  console.log(categoryVisibility);
+
 
   const toggleCategoryVisibility = (categoryName: string) => {
     setCategoryVisibility((prevState) => ({
@@ -26,13 +47,13 @@ const MarineTable = () => {
     const isVisible = categoryVisibility[category.categoryName] ?? false;
 
     return (
-      <div className="overflow-x-auto  mt-10">
+      <div className="overflow-x-auto mt-5 md:mt-10">
         <table className="w-full border table-auto rounded-md">
+          {/* Table header */}
+
           <thead>
             <tr className={`${isVisible ? "bg-gray-100" : ""}`}>
-              <th
-                className={`px-4 py-2 md:w-[200px] flex gap-2 w-max justify-between items-center`}
-              >
+              <th className="px-4 py-2 md:w-[200px] flex gap-2 w-max justify-between items-center">
                 <div className="flex whitespace-nowrap">
                   {category.categoryName}
                 </div>
@@ -42,6 +63,7 @@ const MarineTable = () => {
                     toggleCategoryVisibility(category.categoryName)
                   }
                 >
+                  {/* Toggle button icon  */}
                   {isVisible ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -75,18 +97,21 @@ const MarineTable = () => {
                   )}
                 </button>
               </th>
+              {/* Month headers */}
               {months.map((month, index) => (
                 <th
                   key={index}
-                  className={`px-4 py-2 text-gray-400 font-medium text-xs text-center`}
+                  className="px-4 py-2 text-gray-400 font-medium text-xs text-center"
                 >
                   {month}
                 </th>
               ))}
             </tr>
           </thead>
+          {/* Table body */}
           {isVisible && (
             <tbody>
+              {/* Rows for each animal */}
               {category.data.map((animal, rowIndex) => (
                 <tr key={rowIndex}>
                   <td className="border-b border-grey-500 px-4 py-2">
@@ -109,9 +134,16 @@ const MarineTable = () => {
     );
   };
 
+  const filteredCategories = selectedMarinLife && selectedMarinLife.value !== "All"
+    ? Object.entries(marineData).filter(([_, value]) =>
+
+      value.categoryName.toLowerCase().includes(selectedMarinLife.value.toLowerCase())
+    )
+    : Object.entries(marineData);
+
   return (
     <div>
-      {Object.values(marineData).map((category, index) => (
+      {filteredCategories.map(([_, category], index) => (
         <div key={index}>{renderCategoryTable(category)}</div>
       ))}
     </div>

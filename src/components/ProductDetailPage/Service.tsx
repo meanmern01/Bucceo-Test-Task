@@ -19,14 +19,15 @@ const Service = () => {
               </p>
             </div>
           </div>
-          <h1 className="flex gap-2">
+          <h1 className="flex gap-2 items-center">
             ADAPTIVE SERVICES
             <img
               src="/assets/service.svg"
-              className="w-6 h-6 ms-3"
+              className="w-4 h-4 md:w-6 md:h-6"
               alt="Service Icon"
             />
           </h1>
+          {/*   */}
 
           {services4.map((service, index) => (
             <div key={index} className="flex gap-2 items-center">
@@ -46,9 +47,9 @@ const Service = () => {
             </div>
           ))}
         </div>
-        <div className="p-3 flex flex-col gap-2 items-start justify-center rounded-lg w-full md:w-1/2">
+        <div className="md:p-3 flex flex-col gap-2 items-start justify-center rounded-lg w-full md:w-1/2">
           {services3.map((service, index) => (
-            <div key={index} className="p-3 flex gap-3 items-center">
+            <div key={index} className="pl-0 p-3 md:pl-3 flex gap-3 items-center">
               <img src={`/assets/${service.image}.svg`} className="w-6 h-6" />
               <div>
                 <p className="text-sm md:text-base font-bold">

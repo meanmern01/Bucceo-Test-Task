@@ -4,8 +4,8 @@ const ProductMetaData = () => {
   const rate = 4.5;
   return (
     <div className="py-5">
-      <div className="flex flex-col md:flex-row gap-5 justify-between items-start">
-        <div className="flex flex-col gap-2 w-full md:w-3/5 lg:w-3/4">
+      <div className="flex flex-col md:flex-row gap-10 justify-between items-start">
+        <div className="flex flex-col gap-2 w-full md:w-3/5 lg:w-[65%]">
           <p className="text-3xl md:text-4xl font-semibold tracking-tight">
             {data.title}
           </p>
@@ -47,7 +47,7 @@ const ProductMetaData = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-6 items-end w-full md:w-2/5 lg:w-1/4">
+        <div className="flex flex-col gap-6 items-end w-full md:w-2/5 lg:w-[35%]">
           <div className="flex gap-5">
             <button className="text-[#0F80E8] bg-[#B2DFFF] px-5 py-2 rounded-lg text-[14px] md:text-[16px] lg:text-[18px] leading-none font-semibold shadow-cardShadow">
               Book HERE

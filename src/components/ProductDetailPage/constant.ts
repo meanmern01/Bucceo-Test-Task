@@ -221,3 +221,26 @@ export const marineData = {
     ],
   },
 };
+
+export const marinLifeOptions = [
+  {
+    name: "All",
+    value: "All",
+  },
+  {
+    name: "Sharks",
+    value: "Sharks and Rays",
+  },
+  {
+    name: "Whales",
+    value: "Ocean Fish",
+  },
+  {
+    name: "Turtles",
+    value: "Mammals and Reptiles",
+  },
+  {
+    name: "Others",
+    value: "All",
+  },
+];

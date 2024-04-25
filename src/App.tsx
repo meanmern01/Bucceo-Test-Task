@@ -7,6 +7,7 @@ import Footer from './components/shared/Footer'
 
 function App() {
 
+
   return (
     <>
       <Navbar />
